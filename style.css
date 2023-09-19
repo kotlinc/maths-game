@@ -1,0 +1,12 @@
+h2, h3, b, p, button, input {
+  font-family: "Poppins", sans-serif;
+  color: rgb(220, 220, 220)
+}
+
+body {
+  background-color: rgb(20, 20, 40);
+}
+
+input {
+  color: rgb(20, 20, 40);
+}
