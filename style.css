@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      h2, h3, b, p, button, input {
+        font-family: "Poppins", sans-serif;
+        color: rgb(220, 220, 220);
+      }
+
+      body {
+        background-color: rgb(20, 20, 40);
+        display: flex;
+        gap: 5vw;
+      }
+
+      input, button {
+        color: rgb(20, 20, 40);
+        background-color: rgb(220, 220, 220);
+        border: none;
+        border-radius: 1.25vh;
+      }
+
+      button {
+        width: 10vh;
+        height: 10vh;
+      }
