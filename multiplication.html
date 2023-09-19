@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Maths Game</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
@@ -22,5 +23,78 @@
     </b>
     <br><br>
     <input type="text" id="answer" placeholder="answer here">
+    <script crossorigin src="https://coffeescript.org/v2/browser-compiler-legacy/coffeescript.js"></script>
+    <script type="text/coffeescript">
+      n1 = document.getElementById 'number1'
+
+n2 = document.getElementById 'number2'
+
+ans = document.getElementById 'answer'
+
+stat = document.getElementById 'stat'
+
+correctAns = document.getElementById 'correct-answers'
+
+wrongAns = document.getElementById 'wrong-answers'
+
+timeLeft = document.getElementById 'time-left'
+
+timeRemaining = 5
+cAns = 0
+wAns = 0
+timer = null
+
+updateNums = () ->
+  n1.textContent = Math.floor Math.random() * 12
+  n2.textContent = Math.floor Math.random() * 12
+  answer.value = ''
+
+correct = () ->
+		stat.textContent = "Good job!"
+		setTimeout () ->
+			stat.textContent = "Answer the question."
+		, 1000
+		timeRemaining = 5
+		resetTimer()
+		startTimer()
+		cAns++
+		correctAns.textContent = cAns
+		updateNums()
+
+wrong = () ->
+		stat.textContent = "Try again."
+		setTimeout () ->
+			stat.textContent = "Answer the question."
+		, 1000
+		timeRemaining = 5
+		resetTimer()
+		startTimer()
+		wAns++
+		wrongAns.textContent = wAns
+		updateNums()
+
+check = () ->
+	if Number n1.textContent * Number n2.textContent == Number answer.value
+		correct()
+	else
+		wrong()
+
+resetTimer = () ->
+		clearInterval(timer)
+
+startTimer = () ->
+  timer = setInterval () ->
+    timeRemaining--
+    timeLeft.textContent = timeRemaining
+    if timeRemaining <= 0
+      check()
+  , 1000
+
+startTimer()
+
+answer.addEventListener 'keydown', (event) ->
+	if event.key == 'Enter'
+		check()
+    </script>
   </body>
 </html>
