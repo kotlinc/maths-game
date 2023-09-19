@@ -1,12 +1,22 @@
 h2, h3, b, p, button, input {
   font-family: "Poppins", sans-serif;
-  color: rgb(220, 220, 220)
+  color: rgb(220, 220, 220);
 }
 
 body {
   background-color: rgb(20, 20, 40);
+  display: flex;
+  gap: 5vw;
 }
 
-input {
+input, button {
   color: rgb(20, 20, 40);
+  background-color: rgb(220, 220, 220);
+  border: none;
+  border-radius: 1.25vh;
+}
+
+button {
+  width: 10vh;
+  height: 10vh;
 }
