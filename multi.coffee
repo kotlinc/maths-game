@@ -47,7 +47,7 @@ wrong = () ->
 		updateNums()
 
 check = () ->
-	if Number n1.textContent * Number n2.textContent == Number answer.value
+	if (Number n1.textContent * n2.textContent) == Number answer.value
 		correct()
 	else
 		wrong()

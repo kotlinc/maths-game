@@ -56,7 +56,7 @@ wrong = function() {
 };
 
 check = function() {
-  if (Number(n1.textContent * Number(n2.textContent === Number(answer.value)))) {
+  if ((Number(n1.textContent * n2.textContent)) === Number(answer.value)) {
     return correct();
   } else {
     return wrong();

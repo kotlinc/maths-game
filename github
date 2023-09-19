@@ -1,0 +1,6 @@
+coffee -c -b multi.coffee
+
+git pull
+git add .
+git commit -m "Changed some stuff"
+git push
