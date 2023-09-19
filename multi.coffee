@@ -57,7 +57,7 @@ wrong = () ->
 		startTimer()
 		wAns++
 		wrongAns?.textContent = wAns
-    answer?.value = ''
+    	answer?.value = ''
 
 check = () ->
 	if (Number n1?.textContent * n2?.textContent) == Number answer?.value
